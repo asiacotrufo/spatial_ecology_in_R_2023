@@ -1,2 +1,12 @@
-# spatial_ecology_in_R_2023
-Repo on the course of Spatial Ecology in R at UNIBO 
+# Spatial Ecology in R
+
+## Master Student 👩‍🔬 
+Asia Cotrufo, a very funny person. 🐈‍⬛
+
+## Main scripts in this repo 💻
++ scripts on populations 🧑‍🤝‍🧑
++ scripts on communities 
++ scripts on ecosystem
+
+> **Note**
+> Scripts will be added soon
