@@ -15,3 +15,6 @@ bei.extra$elev
 #or better
 elevation <- bei.extra$elev
 plot(elevation)
+#method 2
+elevation2 <- bei.extra[[1]]
+plot(elevation2)
