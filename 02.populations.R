@@ -108,3 +108,10 @@ prec <- system.file("external/precipitation.asc", package="sdm")
 prec <- rast(prec)
 plot(prec)
 points(presence)
+
+#final multiframe
+par(mfrow=c(1,4))
+plot(elevation)
+plot(temp)
+plot(vegcov)
+plot(prec)
