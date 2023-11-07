@@ -39,3 +39,6 @@ plot(b4, col=clr)
 plot(b8, col=cln)
 
 
+#RGB space
+im.plotRGB (stacksent, r=3, g=2, b=1)
+dev.off()
