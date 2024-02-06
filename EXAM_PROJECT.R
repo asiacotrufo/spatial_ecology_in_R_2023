@@ -7,7 +7,7 @@ library (RStoolbox)
 library (viridis)
 library(patchwork)
 library(ncdf4) 
- 
+library(dplyr) 
 install.packages("RColorBrewer")
 library(RColorBrewer)
 
@@ -27,10 +27,10 @@ Matera_FC2022 <- rast("FCOVER_2022.tiff")
 Matera_FC2023 <- rast("FCOVER_2023.tiff")
 
 #NDVI Normalized Difference Vegetation Index data
-NDVI_2020 <- rast("NDVI_2020.tiff")
-NDVI_2021 <- rast("NDVI_2021.tiff")
-NDVI_2022 <- rast("NDVI_2022.tiff")
-NDVI_2023 <- rast("NDVI_2023.tiff")
+ndvi_2020 <- rast("NDVI_2020.tiff")
+ndvi_2021 <- rast("NDVI_2021.tiff")
+ndvi_2022 <- rast("NDVI_2022.tiff")
+ndvi_2023 <- rast("NDVI_2023.tiff")
 
 #let's look at our data by
 #plotting them with two palette useful for colorblind people
@@ -44,10 +44,10 @@ plot(Matera_FC2023, col=viridis)
 
 cl <- colorRampPalette(brewer.pal(11, 'Spectral'))(100)
 par(mfrow=c(2,2))
-plot(NDVI_2020, col=cl)
-plot(NDVI_2021, col=cl)
-plot(NDVI_2022, col=cl)
-plot(NDVI_2023, col=cl)
+plot(ndvi_2020, col=cl)
+plot(ndvi_2021, col=cl)
+plot(ndvi_2022, col=cl)
+plot(ndvi_2023, col=cl)
 
 #To plot using ggplot we must convert into dataframes
 Matera_FC2020_df <- as.data.frame(Matera_FC2020, xy=TRUE)
@@ -101,13 +101,13 @@ ggsave(filename = "FCover2023.png" , plot = plot_FC2023)
 
 
 
-
-NDVI_2020_df <- as.data.frame(NDVI_2020, xy=TRUE)
-plot_ndvi2020 <-  ggplot(NDVI_2020_df, aes(x = x, y = y, fill = NDVI_2020)) +
+ndvi_2020
+ndvi_2020_df <- as.data.frame(ndvi_2020, xy=TRUE)
+plot_ndvi2020 <-  ggplot(ndvi_2020_df, aes(x = x, y = y, fill = NDVI_2020)) +
   geom_tile() +
   scale_fill_viridis_c("plasma") +  
   theme_minimal() +
-  labs(title = "Fraction of Vegetation Cover 2020")
+  labs(title = "Normalized Difference Vegetation Index 2020")
 
 plot_ndvi2020
 ggsave(filename = "ndvi2020.png" , plot = plot_ndvi2020)
@@ -115,12 +115,12 @@ ggsave(filename = "ndvi2020.png" , plot = plot_ndvi2020)
 
 
 
-NDVI_2021_df <- as.data.frame(NDVI_2021, xy=TRUE)
-plot_ndvi2021 <-  ggplot(NDVI_2021_df, aes(x = x, y = y, fill = NDVI_2021)) +
+ndvi_2021_df <- as.data.frame(ndvi_2021, xy=TRUE)
+plot_ndvi2021 <-  ggplot(ndvi_2021_df, aes(x = x, y = y, fill = NDVI_2021)) +
   geom_tile() +
   scale_fill_viridis_c("plasma") +  
   theme_minimal() +
-  labs(title = "Fraction of Vegetation Cover 2021")
+  labs(title = "Normalized Difference Vegetation Index 2021")
 
 plot_ndvi2021
 ggsave(filename = "ndvi2021.png" , plot = plot_ndvi2021)
@@ -128,25 +128,135 @@ ggsave(filename = "ndvi2021.png" , plot = plot_ndvi2021)
 
 
 
-NDVI_2022_df <- as.data.frame(NDVI_2022, xy=TRUE)
-plot_ndvi2022 <-  ggplot(NDVI_2022_df, aes(x = x, y = y, fill = NDVI_2022)) +
+ndvi_2022_df <- as.data.frame(ndvi_2022, xy=TRUE)
+plot_ndvi2022 <-  ggplot(ndvi_2022_df, aes(x = x, y = y, fill = NDVI_2022)) +
   geom_tile() +
   scale_fill_viridis_c("plasma") +  
   theme_minimal() +
-  labs(title = "Fraction of Vegetation Cover 2022")
+  labs(title = "Normalized Difference Vegetation Index 2022")
 
 plot_ndvi2022
 ggsave(filename = "ndvi2022.png" , plot = plot_ndvi2022)
 
 
 
-
-NDVI_2023_df <- as.data.frame(NDVI_2023, xy=TRUE)
-plot_ndvi2023 <-  ggplot(NDVI_2023_df, aes(x = x, y = y, fill = NDVI_2023)) +
+ndvi_2023
+ndvi_2023_df <- as.data.frame(ndvi_2023, xy=TRUE)
+plot_ndvi2023 <-  ggplot(ndvi_2023_df, aes(x = x, y = y, fill = NDVI_2023)) +
   geom_tile() +
   scale_fill_viridis_c("plasma") +  
   theme_minimal() +
-  labs(title = "Fraction of Vegetation Cover 2020")
+  labs(title = "Normalized Difference Vegetation Index 2023")
 
 plot_ndvi2023
 ggsave(filename = "ndvi2023.png" , plot = plot_ndvi2023)
+
+
+FCOVER_comparison <- plot_FC2020 + plot_FC2021 + plot_FC2022 + plot_FC2023
+FCOVER_comparison
+
+ggsave (filename = "FCOVERcomparison.png", plot = FCOVER_comparison)
+
+NDVI_comparison <- plot_ndvi2020 + plot_ndvi2021 + plot_ndvi2022 + plot_ndvi2023
+NDVI_comparison
+
+ggsave (filename = "NDVIcomparison.png", plot = NDVI_comparison)
+
+stacked_FCOVER <- c(Matera_FC2020, Matera_FC2021, Matera_FC2022, Matera_FC2023)
+stacked_NDVI <- c(ndvi_2020, ndvi_2021, ndvi_2022, ndvi_2023)
+
+plot(stacked_FCOVER, col = cl)
+plot(stacked_NDVI, col = cl)
+
+cldif <- colorRampPalette(c("blue", "white", "red")) (100)
+#difference between the FCOVER 2020 and 2021
+difCOVER <- stacked_FCOVER[[2]] - stacked_FCOVER[[1]]
+plot(difCOVER, col=cldif)
+#difference between the FCOVER 2022 and 2021
+difCOVER_2 <- stacked_FCOVER[[3]] - stacked_FCOVER[[2]]
+plot(difCOVER_2, col = cldif)
+#difference between the FCOVER 2023 and 2022
+difCOVER_3 <- stacked_FCOVER[[4]] - stacked_FCOVER[[3]]
+plot(difCOVER_3, col = cldif)
+#difference between the FCOVER 2023 and 2020
+difCOVER_4 <- stacked_FCOVER[[4]] - stacked_FCOVER[[1]]
+plot(difCOVER_4, col = cldif)
+
+#difference between the NDVI 2020 and 2021
+difNDVI <- stacked_NDVI[[2]] - stacked_NDVI[[1]]
+plot(difNDVI, col=cldif)
+#difference between the NDVI 2022 and 2021
+difNDVI_2 <- stacked_NDVI[[3]] - stacked_NDVI[[2]]
+plot(difNDVI_2, col=cldif)
+#difference between the NDVI 2023 and 2022
+difNDVI_3 <- stacked_NDVI[[4]] - stacked_NDVI[[3]]
+plot(difNDVI_3, col=cldif)
+#difference between the NDVI 2020 and 2023
+difNDVI_4 <- stacked_NDVI[[4]] - stacked_NDVI[[1]]
+plot(difNDVI_4, col=cldif)
+
+#major differences appears to be between 2020_2021 and 2023_2020 so we
+#further analyze them and save the plots
+
+#for the Fraction of Vegetation Cover
+difCOVER
+difCOVER_df <- as.data.frame(difCOVER, xy=TRUE)
+diff_20_21_plot <- ggplot() + geom_raster(difCOVER_df, mapping=aes(x=x, y=y, fill= FCOVER_2021 )) + scale_fill_gradientn(colors = cldif) + ggtitle("FCOVER difference 2020 2021")
+ggsave(filename = "diffCOV_20_21.png" , plot = diff_20_21_plot)
+
+
+difCOVER_4
+difCOVER4_df <- as.data.frame(difCOVER_4, xy=TRUE)
+diff_23_20_plot <- ggplot() + geom_raster(difCOVER4_df, mapping=aes(x=x, y=y, fill= FCOVER_2023 ))+ scale_fill_gradientn(colors = cldif) + ggtitle("FCOVER difference 2023 2020")
+ggsave(filename = "diffCOV_23_20.png" , plot = diff_23_20_plot)
+
+
+#for the Normalized Difference Vegetation Index
+difNDVI
+difNDVI_df <- as.data.frame(difNDVI, xy=TRUE)
+diffndvi_20_21_plot <- ggplot() + geom_raster(difNDVI_df, mapping=aes(x=x, y=y, fill= NDVI_2021 ))+ scale_fill_gradientn(colors = cldif) + ggtitle("NDVI difference 2021 2020")
+ggsave(filename = "diffNDVI_20_21.png" , plot = diffndvi_20_21_plot)
+
+
+difNDVI_4
+difNDVI4_df <- as.data.frame(difNDVI_4, xy=TRUE)
+diffndvi_23_20_plot <- ggplot() + geom_raster(difNDVI4_df, mapping=aes(x=x, y=y, fill= NDVI_2023 ))+ scale_fill_gradientn(colors = cldif) + ggtitle("NDVI difference 2023 2020")
+ggsave(filename = "diffNDVI_23_20.png" , plot = diffndvi_23_20_plot)
+
+ndvitrend <- plot(ndvi_2020, ndvi_2021, xlab="NDVI 2020", ylab="NDVI 2021", main="Trend of NDVI")
+abline(0,1, col="red")
+
+ndvitrend <- plot(ndvi_2022, ndvi_2023, xlab="NDVI 2022", ylab="NDVI 2023", main="Trend of NDVI")
+abline(0,1, col="red")
+
+ndvitrend <- plot(ndvi_2023, ndvi_2020, xlab="NDVI 2023", ylab="NDVI 2020", main="Trend of NDVI")
+abline(0,1, col="red")
+
+ndvitrend <- plot(ndvi_2022, ndvi_2021, xlab="NDVI 2022", ylab="NDVI 2021", main="Trend of NDVI")
+abline(0,1, col="red")
+
+
+fcovertrend <- plot(Matera_FC2020, Matera_FC2021, xlab="FCOVER 2020", ylab="FCOVER 2021", main="Trend of FCOVER")
+abline(0,1, col="red")
+
+fcovertrend <- plot(Matera_FC2021, Matera_FC2022, xlab="FCOVER 2021", ylab="FCOVER 2022", main="Trend of FCOVER")
+abline(0,1, col="red")
+
+fcovertrend <- plot(Matera_FC2023, Matera_FC2022, xlab="FCOVER 2023", ylab="FCOVER 2022", main="Trend of FCOVER")
+abline(0,1, col="red")
+
+fcovertrend <- plot(Matera_FC2020, Matera_FC2023, xlab="FCOVER 2020", ylab="FCOVER 2023", main="Trend of FCOVER")
+abline(0,1, col="red")
+
+#CORRELATION BETWEEN FCOVER AND NDVI FOR EACH YEAR
+trend1 <- plot(Matera_FC2020, ndvi_2020, xlab="FCOVER 2020", ylab="NDVI 2020", main="2020 trend")
+abline(0,1, col="red")
+
+trend2 <- plot(Matera_FC2021, ndvi_2021, xlab="FCOVER 2021", ylab="NDVI 2021", main="2021 trend")
+abline(0,1, col="red")
+
+trend3 <- plot(Matera_FC2022, ndvi_2022, xlab="FCOVER 2022", ylab="NDVI 2022", main="2022 trend")
+abline(0,1, col="red")
+
+trend4 <- plot(Matera_FC2023, ndvi_2023, xlab="FCOVER 2023", ylab="NDVI 2023", main="2023 trend")
+abline(0,1, col="red")
