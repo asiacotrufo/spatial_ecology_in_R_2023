@@ -1,0 +1,261 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+
+\usetheme{Frankfurt}
+\usecolortheme{seahorse}
+
+\title{\textbf{Murgia Materana Park and National Park of Alta Murgia}}
+
+\author{\textbf{Asia Cotrufo}}
+\vspace{4mm}
+\vspace{2mm}
+\date{\textsc{February 2024}}
+
+
+\begin{document}
+
+\maketitle
+
+\AtBeginSection[]
+{
+\begin{frame}
+\frametitle{}
+\tableofcontents[currentsection]
+\end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\begin{frame}{Murgia Materana Park}
+\begin{itemize}
+    \item\small a protected natural area located at the eastern end of Basilicata, within which there is the Gravina di Matera, a deep limestone canyon, at the bottom of which flows the stream Gravina.
+    \item\small this area, inhabited since prehistoric times, is characterized by the presence of around \textbf{150 rock churches}.
+    \item \small the park holds approximately 923 species (1/6 of the entire national flora and 1/3 of the regional flora).
+    \item \small the park's unique erosional grooves serve as conservative environments for many rare species, acting as sanctuaries for ancient flora that have disappeared elsewhere, like the \textbf{Greek Kummel}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{National Park of Alta Murgia}
+\begin{itemize}
+    \item\small \textbf{PnAM} is a national park established in 2004 located in Puglia, in the provinces of Bari and Barletta-Andria-Trani, with an extension of 68,033 hectares, extending into the highest part of the Murge plateau in the north-west.
+    \item\small it is part of the larger protection area established to protect the habitat of the \textit{Lesser kestrel} (Falco grillaio).
+    \item \small artificial reforestations of Aleppo pine were carried out over a period of approximately fifty years starting from 1930, affecting the internal areas and coastal strips of Puglia,
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Habitat and Biodiversity}
+\begin{itemize}
+    \item\small the human activity over centuries has led to the depletion of woodlands while simultaneously promoting the spread of herbaceous species, resulting in degraded types of vegetation such as \textbf{garrigue} and \textbf{pseudo-steppe}.
+    \item  the climate is typically Mediterranean, with rainfall concentrated mainly in autumn and spring and practically absent during the summer (average annual temperatures vary from 9°C to 23°C)
+    \item \small notable species include the \textbf{Thorny Thyme}  (\textit{Tymus spinulosus}), a rare endemic plant of Southern Italy, and the \textbf{Mediterranean asphodel} (\textit{Asphodelus microcarpus}).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Habitat and Biodiversity}
+\begin{itemize}
+    \item\small the \textbf{downy oak} and \textbf{fragno} that are home to a rich and picturesque fauna, such as the \textbf{wren} and the \textbf{river nightingale}.
+    \item\small Here it is also possible to meet reptiles such as the \textbf{Leopard Snake} and the \textbf{Common Viper}. Among the limestone rocks, terrestrial life includes martens, foxes, porcupine, badgers and hedgehogs.
+    \item\small the ornithological fauna includes the \textbf{Egyptian Vulture}, the \textbf{Lesser Kestrel }and other species such as \textbf{Buzzards}, \textbf{Red Kites} and \textbf{Woolly Falcons}.
+    \item \small forests are mainly made up of \textbf{oak species, Cypress and pines}. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Habitat and Biodiversity}
+\begin{itemize}
+    \item \small the steppe areas are characterized by herbaceous vegetation such as the \textbf{stipa} and various species of orchids, including the recently discovered species \textbf{Ophrys murgiana}.
+    \item \small the arboreal-shrub vegetation characterizing the natural pastures is made up of \textbf{wild olive, almond, blackthorn and pear}, among others.
+    \item The Murgia is also the habitat of amphibians such as the \textbf{Italian newt} (Triturus italicus), the \textbf{red deer} (Elaphe quatuorlineata) and \textbf{Hermann's tortoise} (Testudo hermanni).
+\end{itemize}    
+\end{frame}
+
+\begin{frame}{Matera}
+\begin{itemize}
+    \item\small is the third most ancient city of the world, also known as "\textbf{the city of the Sassi}", because of the peculiarity and uniqueness of its historic center, declared a world heritage site by UNESCO in 1993, which is made up of rock buildings and architecture dug into the rock.
+    \item\small the choice of the site guaranteed safety for the town but caused difficulties in supplying water. That is why, since Neolithic times, the inhabitants exploited the friability of the rock and the slopes to their advantage to create a complex system of water canalization, conducted in a widespread network of cisterns and "divers". This appears to be one of the oldest and best preserved examples of \textbf{bio-architecture} in the world.
+    \item\small In the late 1950s for irrigation purposes, the Bradano river was interrupted by the building of a dam, called \textbf{Lake San Giuliano}, which is part of a regional nature reserve. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Maps of the Parks}
+    \centering
+    \includegraphics[width = 0.6 \textwidth]{mappa.png}
+\end{frame}
+
+\begin{frame}{Maps of the Parks}
+    \includegraphics[width = 0.5 \textwidth]{Murgia Materana.png}
+    \includegraphics[width = 0.48 \textwidth]{Murgia.png}
+\end{frame}
+
+
+\begin{frame}{Aim of the project}
+The aim of this analysis by remote sensing is to check and understand the condition of the vegetation, inside and around the two Murgia areas.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Materials}
+
+\begin{frame}{Images}
+Raster images from Copernicus were cropped to the interested areas and downloaded
+\begin{itemize}
+    \item 4 tiff images for the FCOVER, from year 2020 to 2023
+    \item 4 tiff images for the NDVI index, from year 2020 to 2023
+\end{itemize}
+The images chosen cover the months of April, May or June, so between the spring and summer period. 
+\end{frame}
+
+
+\begin{frame}{Images}
+\centering
+    \includegraphics[width = 0.20 \textwidth]{FCOVER_2020.png}
+    \includegraphics[width = 0.20 \textwidth]{FCOVER_2021.png}
+    \includegraphics[width = 0.20 \textwidth]{FCOVER_2022.png}
+    \includegraphics[width = 0.20 \textwidth]{FCOVER_2023.png}\\
+    \footnotesize \textbf{FCOVER}\\
+    \includegraphics[width = 0.20 \textwidth]{NDVI_2020.png}
+    \includegraphics[width = 0.20 \textwidth]{NDVI_2021.png}
+    \includegraphics[width = 0.20 \textwidth]{NDVI_2022.png}
+    \includegraphics[width = 0.20 \textwidth]{NDVI_2023.png}\\
+    \footnotesize \textbf{NDVI}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Methods}
+
+\begin{frame}{NDVI}
+\begin{itemize}
+    \item\small The \textbf{normalized difference vegetation index} (NDVI) is a numerical indicator used to assess and monitor the health, density, and distribution of vegetation on the Earth's surface. It is calculated using remote sensing data, typically obtained from satellites.
+    \item\small It evaluates the presence of photosynthetic activity, as it relates the \textbf{red} spectrum, in which there is absorption by chlorophyll, and the \textbf{near infrared} spectrum in which the leaves reflect the light to avoid overheating. Index values are typically between -1 and +1, where values close to 1 indicate dense, healthy vegetation.
+\end{itemize}
+\vspace{4mm}
+    \begin{equation} %ndvi
+        NDVI=\frac{NIR-red}{NIR+red}
+    \label{eq:ndvi}  % to label the equation
+    \end{equation}
+\end{frame}
+
+\begin{frame}{FCOVER}
+\begin{itemize}
+    \item\small The\textbf{ Fraction of Vegetation Cover }corresponds to the fraction of ground covered by green vegetation, so a quantification of the spatial extent of the vegetation. 
+    \item \small It can be directly interpreted with the human eyes.
+    \item \small Its temporal evolution can be used to monitor the land cover changes (e.g. deforestation or fire scar extent).
+    \item \small here we used Daily FCOVER at \textbf{300m} resolution, while the representative date coincides with the end of a 10-daily period (reference dekad).
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Results}
+
+\begin{frame}{FCOVER}
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{FCOVERcomparison.png}\\
+    \footnotesize \textbf{FCover} calculated for each year (viridis color palette).
+\end{frame}
+
+\begin{frame}{NDVI}
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{NDVIcomparison.png}\\
+    \footnotesize \textbf{NDVI} calculated for each year, (magma color palette).
+\end{frame}
+
+\begin{frame}{Difference of FCOVER}
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{FCover_differences.png}
+\end{frame}
+
+\begin{frame}{Difference of FCOVER}
+    \centering
+    \includegraphics[width = 0.50 \textwidth]{diffCOV_20_21.png}\\
+    \includegraphics[width = 0.50 \textwidth]{diffCOV_23_20.png}
+\end{frame}
+
+\begin{frame}{Difference of NDVI}
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{NDVI_differences.png}
+\end{frame}
+
+\begin{frame}{Difference of NDVI}
+    \centering
+    \includegraphics[width = 0.50 \textwidth]{diffNDVI_20_21.png}\\
+    \includegraphics[width = 0.50 \textwidth]{diffNDVI_23_20.png}
+\end{frame}
+
+\begin{frame}{trend of NDVI through the years}
+    \centering
+    \includegraphics[width = \textwidth]{NDVItrend.png}
+\end{frame}
+
+\begin{frame}{trend of FCOVER through the years}
+    \centering
+    \includegraphics[width = \textwidth]{FCovertrend.png}
+\end{frame}
+
+\begin{frame}{correlation FCOVER-NDVI}
+    \centering
+    \includegraphics[width = \textwidth]{trend_ndvi_fcover.png}
+\end{frame}
+
+\begin{frame}{trend of FCOVER differences}
+    \centering
+    \includegraphics[width = 0.3\textwidth]{trend_differenza_cover3.jpeg}\\
+    \includegraphics[width = 0.3\textwidth]{trend_differenza_cover2.jpeg}\\
+    \includegraphics[width = 0.3\textwidth]{trend_differenza_cover1.jpeg}
+\end{frame}
+
+\begin{frame}{trend of NDVI differences}
+    \centering
+    \includegraphics[width = 0.3\textwidth]{Rplot04.jpeg}\\
+    \includegraphics[width = 0.3\textwidth]{Rplot03.jpeg}\\
+    \includegraphics[width = 0.3\textwidth]{Rplot02.jpeg}
+\end{frame}
+
+\begin{frame}{trend of FCOVER-NDVI differences}
+    \centering
+    \includegraphics[width = \textwidth]{trend_differenza_fcover_ndvi.png}
+\end{frame}
+
+\section{Discussion}
+
+\begin{frame}{Discussion}
+\begin{itemize}
+    \item NDVI analysis suggests that the \textbf{vegetation is in a better condition than before}.
+    \item Moreover, FCOVER analysis support the evidence since it appears to be increased from 2020 to 2023.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\centering
+In conclusion,.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References}
+
+\begin{frame}{References}
+\begin{enumerate}
+\item\url{https://www.parcoaltamurgia.it/}
+\item\url{https://www.parcomurgia.it/}
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{GitHub}
+
+\begin{frame}{Script}
+Here you can find my script on GitHub:
+\vspace{5mm}\\
+\url{https://github.com/asiacotrufo/spatial_ecology_in_R_2023/blob/main/EXAM_PROJECT.R}
+\end{frame}
+
+\end{document}
