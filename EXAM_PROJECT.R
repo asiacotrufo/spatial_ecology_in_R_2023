@@ -1,34 +1,36 @@
 #uploading the libraries
 
-library(terra)
-library (raster)
-library (ggplot2)
-library (RStoolbox)
-library (viridis)
-library(dplyr)
+library(terra) #creating, reading, manipulating, and writing raster data
+library (raster) #creating, reading, manipulating, and writing raster data
+library (ggplot2) #for data visualization
+library (RStoolbox) #toolbox for remote sensing image processing and analysis
+library (viridis) #Colorblind-Friendly Color Maps for R 
+library(dplyr) #tool for working with data frame
+
 #this project aim to see the variation in Fraction of Vegetation Cover and NDVI
-#of the Parco Nazionale dell'Alta Murgia and Parco della Murgia Materana
+#of the Regional Park of Murgia Materana (mainly) and
+#National Park of Alta Murgia
 
 #setting the pathway were data are stored
 setwd ("C:/Users/asia2/Documents/dataset")
 
 #files were cutted already in Copernicus
 
-#uploading the files in the variables
+##uploading the raster images in the variables
 #Fraction of Vegetation Cover
 Matera_FC2020 <- rast("FCOVER_2020.tiff")
 Matera_FC2021 <- rast("FCOVER_2021.tiff")
 Matera_FC2022 <- rast("FCOVER_2022.tiff")
 Matera_FC2023 <- rast("FCOVER_2023.tiff")
 
-#NDVI Normalized Difference Vegetation Index data
+#NDVI Normalized Difference Vegetation Index 
 ndvi_2020 <- rast("NDVI_2020.tiff")
 ndvi_2021 <- rast("NDVI_2021.tiff")
 ndvi_2022 <- rast("NDVI_2022.tiff")
 ndvi_2023 <- rast("NDVI_2023.tiff")
 
 #let's look at our data by
-#plotting them with two palette useful for colorblind people
+#plotting them with palette useful for colorblind people
 viridis <- colorRampPalette(viridis(7))(255)
 
 par(mfrow=c(2,2))
@@ -45,7 +47,8 @@ plot(ndvi_2021, col=viridis, main ="NDVI 2021")
 plot(ndvi_2022, col=viridis, main ="NDVI 2022")
 plot(ndvi_2023, col=viridis, main ="NDVI 2023")
 
-#To plot using ggplot we must convert into dataframes
+##GGPLOT AND GGSAVE
+#we must convert into dataframes
 Matera_FC2020_df <- as.data.frame(Matera_FC2020, xy=TRUE)
 Matera_FC2020
 plot_FC2020 <-  ggplot(Matera_FC2020_df, aes(x = x, y = y, fill = FCOVER_2020)) +
@@ -146,24 +149,26 @@ plot_ndvi2023 <-  ggplot(ndvi_2023_df, aes(x = x, y = y, fill = NDVI_2023)) +
 plot_ndvi2023
 ggsave(filename = "ndvi2023.png" , plot = plot_ndvi2023)
 
-
+#we can save all 4 heath maps of each parameter in one image
 FCOVER_comparison <- plot_FC2020 + plot_FC2021 + plot_FC2022 + plot_FC2023
 FCOVER_comparison
-
 ggsave (filename = "FCOVERcomparison.png", plot = FCOVER_comparison)
 
 NDVI_comparison <- plot_ndvi2020 + plot_ndvi2021 + plot_ndvi2022 + plot_ndvi2023
 NDVI_comparison
-
 ggsave (filename = "NDVIcomparison.png", plot = NDVI_comparison)
 
+#To look at the difference between years(pairwise comparison) we must stack data,
+#and then we can perform the difference
 stacked_FCOVER <- c(Matera_FC2020, Matera_FC2021, Matera_FC2022, Matera_FC2023)
 stacked_NDVI <- c(ndvi_2020, ndvi_2021, ndvi_2022, ndvi_2023)
-
+#our stacked data
 plot(stacked_FCOVER, col = viridis)
 plot(stacked_NDVI, col = viridis)
 
+#defining the paette
 cldif <- colorRampPalette(c("blue", "white", "red")) (100)
+
 #difference between the FCOVER 2020 and 2021
 difCOVER <- stacked_FCOVER[[2]] - stacked_FCOVER[[1]]
 #difference between the FCOVER 2022 and 2021
@@ -193,8 +198,8 @@ plot(difNDVI_3, col=cldif, main="NDVI difference 2022_2023")
 difNDVI_4 <- stacked_NDVI[[4]] - stacked_NDVI[[1]]
 plot(difNDVI_4, col=cldif, main="NDVI difference 2023_2020")
 
-#major differences appears to be between 2020_2021 and 2023_2020 so we
-#further analyze them and save the plots
+#major differences appears to be between 2020_2021 and 2023_2020
+#so I saved the plots (again converting in dataframes and using ggsave)
 
 #for the Fraction of Vegetation Cover
 difCOVER
@@ -222,6 +227,10 @@ difNDVI4_df <- as.data.frame(difNDVI_4, xy=TRUE)
 diffndvi_23_20_plot <- ggplot() + geom_raster(difNDVI4_df, mapping=aes(x=x, y=y, fill= NDVI_2023 ))+ scale_fill_gradientn(colors = cldif) + ggtitle("NDVI difference 2023 2020")
 ggsave(filename = "diffNDVI_23_20.png" , plot = diffndvi_23_20_plot)
 
+
+##TRENDS
+
+#NDVI
 ndvitrend <- plot(ndvi_2020, ndvi_2021, xlab="NDVI 2020", ylab="NDVI 2021", main="Trend of NDVI")
 abline(0,1, col="red")
 ndvitrend <- plot(ndvi_2021, ndvi_2022, xlab="NDVI 2021", ylab="NDVI 2022", main="Trend of NDVI")
@@ -232,7 +241,7 @@ ndvitrend <- plot(ndvi_2020, ndvi_2023, xlab="NDVI 2020", ylab="NDVI 2023", main
 abline(0,1, col="red")
 
 
-
+#FCOVER
 fcovertrend <- plot(Matera_FC2020, Matera_FC2021, xlab="FCOVER 2020", ylab="FCOVER 2021", main="Trend of FCOVER")
 abline(0,1, col="red")
 fcovertrend <- plot(Matera_FC2021, Matera_FC2022, xlab="FCOVER 2021", ylab="FCOVER 2022", main="Trend of FCOVER")
@@ -241,6 +250,7 @@ fcovertrend <- plot(Matera_FC2022, Matera_FC2023, xlab="FCOVER 2022", ylab="FCOV
 abline(0,1, col="red")
 fcovertrend <- plot(Matera_FC2020, Matera_FC2023, xlab="FCOVER 2020", ylab="FCOVER 2023", main="Trend of FCOVER")
 abline(0,1, col="red")
+
 
 #CORRELATION BETWEEN FCOVER AND NDVI FOR EACH YEAR
 trend1 <- plot(Matera_FC2020, ndvi_2020, xlab="FCOVER 2020", ylab="NDVI 2020", main="2020 trend")
@@ -252,13 +262,7 @@ abline(0,1, col="red")
 trend4 <- plot(Matera_FC2023, ndvi_2023, xlab="FCOVER 2023", ylab="NDVI 2023", main="2023 trend")
 abline(0,1, col="red")
 
-#trend differenza
-trenddiff1 <- plot(difCOVER, difNDVI, xlab="difCOVER2020_2021", ylab="difNDVI2020_2021", main="trend of difference")
-abline(0,1, col="red")
-trenddiff2 <- plot(difCOVER_4, difNDVI_4, xlab="difCOVER2023_2020", ylab="difNDVI2023_2020", main="trend of difference")
-abline(0,1, col="red")
-dev.off()
-
+#trend of the differences
 dif_trendFC<- plot(difCOVER, difCOVER_2, xlab="difCOVER2020_2021", ylab="difCOVER2021_2022", main="trend of difference")
 abline(0,1, col="red")
 dif_trendFC2<- plot(difCOVER_2, difCOVER_3, xlab="difCOVER2021_2022", ylab="difCOVER2022_2023", main="trend of difference")
