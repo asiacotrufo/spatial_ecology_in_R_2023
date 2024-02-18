@@ -48,14 +48,14 @@
 \begin{figure}
     \centering
     \includegraphics[width=0.4\linewidth]{Murgia Materana.png}
-    \caption{Maps from Google maps}
-    \label{fig:immagine1}
+    \captionsetup{font=tiny}
+    \caption {Map from Google maps}
   \end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=0.4\linewidth]{DSC03195.jpg}
-    \caption{view of Murgia, 14/02/2024, ph: Asia Cotrufo}
-    \label{fig:immagine2}
+    \captionsetup{font=tiny}
+    \caption {view of Murgia, 14/02/2024, ph: Asia Cotrufo}
   \end{figure}
 \end{frame}
 
@@ -67,35 +67,38 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Maps of the Parks}
+\begin{frame}{Map of the Park}
+\begin{figure}
+    \centering
     \includegraphics[width = 0.8 \textwidth]{Murgia.png}
-    \footnotesize Maps of National Park of Alta Murgia, source: https://www.parcoaltamurgia.it/ 
+    \captionsetup{font=tiny}
+    \caption{Map of National Park of Alta Murgia, source: parcoaltamurgia.it}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Habitat and Biodiversity}
 \begin{itemize}
-    \item\small the human activity over centuries has led to the depletion of woodlands while simultaneously promoting the spread of herbaceous species, resulting in degraded types of vegetation such as \textbf{garrigue} and \textbf{pseudo-steppe}, characterized by various species of orchids, including the recently discovered species \textbf{Ophrys murgiana}.
-    \item  the climate is typically Mediterranean, with rainfall concentrated mainly in autumn and spring and practically absent during the summer (average annual temperatures vary from 9°C to 23°C)
+    \item\small the human activity over centuries has led to the depletion of woodlands while simultaneously promoting the spread of herbaceous species, resulting in degraded types of vegetation such as \textbf{garrigue} and \textbf{pseudo-steppe}.
     \item \small notable species include the \textbf{Thorny Thyme}  (\textit{Tymus spinulosus}), a rare endemic plant of Southern Italy, and the \textbf{Mediterranean asphodel} (\textit{Asphodelus microcarpus}).
+    \item\small The area is characterized by various species of orchids, including the recently discovered species \textbf{Ophrys murgiana}.
     \item\small the arboreal-shrub vegetation is made up of \textbf{wild olive, almond, blackthorn and pear}, among others.
 \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Flora}
-  
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[width=\linewidth]{DSC03191.jpg}
+    \captionsetup{font=tiny}
     \captionof{figure}{Asfodelo microcarpus,  ph: Asia Cotrufo}
-    \label{fig:immagine3}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{DSC03201.jpg}
+    \captionsetup{font=tiny}
     \captionof{figure}{Barlia robertiana (Orchys), ph: Asia Cotrufo}
-    \label{fig:immagine4}
   \end{minipage}
 \end{frame}
 
@@ -110,19 +113,18 @@
 
 \begin{frame}
   \frametitle{ornithological fauna}
-  
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[width=\linewidth]{schede_18148_617_grillaio.jpg}
+    \captionsetup{font=tiny}
     \captionof{figure}{Falco grillaio \textit{(Falco naumanni)}}
-    \label{fig:immagine5}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[width=0.6\linewidth]{YYFEDERPnov66072-img1.jpg}
+    \captionsetup{font=tiny}
     \captionof{figure}{Capovaccaio \textit{(Neophron percnopterus)}, source: Google Images}
-    \label{fig:immagine6}
   \end{minipage}
 \end{frame}
 
@@ -138,15 +140,15 @@
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[width=\linewidth]{DSC_0017.jpg}
+    \captionsetup{font=tiny}
     \captionof{figure}{Chiesa Rupestre di Cristo La Selva, ph:Asia Cotrufo}
-    \label{fig:immagine7}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[width=\linewidth]{materagravina.jpg}
-    \captionof{figure}{view of Matera and it Gravina}
-    \label{fig:immagine8}
+    \captionsetup{font=tiny}
+    \captionof{figure}{view of Matera and it Gravina, source: Google Images}
   \end{minipage}
 \end{frame}
 
@@ -157,7 +159,7 @@
 
 
 \begin{frame}{Aim of the project}
-The aim of this analysis by remote sensing is to check and understand the condition of the vegetation, inside and around the two Murgia areas.
+The aim of this analysis to understand the condition of the vegetation, inside and around the two Murgia areas, during the period 2020-2023.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -289,9 +291,7 @@ The images chosen cover the months of April, May or June, so between the spring 
 Generally in these areas rainfalls are concentrated in autumn and spring, while summer is pretty dry. 
     \begin{itemize}
         \item\small \textbf{2019}: was characterized buy various hails and storms events, especially in the \textbf{spring/summer} period, this may have affected the vegetation in the following months; \textbf{autumn} was pretty hot and dry.
-        \vspace{2mm}
         \item\small \textbf{2020}: characterized by an \textbf{extremely dry winter}; some precipitation during the \textbf{spring/summer period,} but also a hot and very dry \textbf{autumn} until mid-November.
-        \vspace{2mm}
         \item\small \textbf{2021}: numerous heat waves during \textbf{summer}, warm and partly dry \textbf{winter}; as well as a dry \textbf{spring};
     \end{itemize}
 \end{frame}
@@ -309,7 +309,7 @@ Generally in these areas rainfalls are concentrated in autumn and spring, while 
     \item \small It seems that in the Murgia areas considered, the Fraction of Vegetation Cover and the NDVI index has increased from 2020 to 2023, suggesting an \textbf{improvement} of the extent of green vegetations as well as its density and health.
     \item \small It would be interesting to understand the \textbf{species composition changes} that is occurring in the area, since climate change is expected to have significant impacts on it and also on ecosystem structure and distribution. The vegetation types in these areas range from forests to woodlands, savannas, shrublands, and grasslands.
     \item \small With increasing temperatures and decreased precipitation, generally an expansion of \textbf{scrublands and shrublands} will be favoured, at the expense of \textbf{forests} (important habitats for Falco naumanni) or \textbf{grasslands}.
-    \item \small However, the Mediterranean scrub has greater phenotypic plasticity, which allows it to adapt to current conditions with fewer problems. Added to this is the ability of the bushes to colonize the soil in extreme conditions, such as after a fire or during a dry period.
+    \item \small Despite of this, the Mediterranean scrub has a great phenotypic plasticity, which allows it to adapt to current conditions with fewer problems, as well as the ability of the bushes to colonize the soil in extreme conditions.
 \end{itemize}
 \end{frame}
 
