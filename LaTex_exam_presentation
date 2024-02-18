@@ -9,7 +9,7 @@
 \usetheme{Frankfurt}
 \usecolortheme{seahorse}
 
-\title{\textbf{Murgia Materana Park and National Park of Alta Murgia}}
+\title{\textbf{Monitoring vegetation distribution and health around the Murgia Materana and the National Park of Alta Murgia}}
 
 \author{\textbf{Asia Cotrufo}}
 \vspace{4mm}
@@ -33,64 +33,126 @@
 
 \section{Introduction}
 
-\begin{frame}{Murgia Materana Park}
+\begin{frame}{Murgia Materana Regional Park}
 \begin{itemize}
     \item\small a protected natural area located at the eastern end of Basilicata, within which there is the Gravina di Matera, a deep limestone canyon, at the bottom of which flows the stream Gravina.
     \item\small this area, inhabited since prehistoric times, is characterized by the presence of around \textbf{150 rock churches}.
-    \item \small the park holds approximately 923 species (1/6 of the entire national flora and 1/3 of the regional flora).
-    \item \small the park's unique erosional grooves serve as conservative environments for many rare species, acting as sanctuaries for ancient flora that have disappeared elsewhere, like the \textbf{Greek Kummel}
+    \item \small the park holds approximately 923 vegetational species among which around a hundred are rare and very rare species.
+    \item \small the park's unique erosional grooves serve as conservative environments for ancient flora that have disappeared elsewhere.
+    \item\small The symbol of the park is the \textbf{Falco grillaio} (\textit{Falco naumanni}), called "u strjscìgnl" in dialect, which often nests on the roofs of the Sassi di Matera.
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Murgia Materana Regional Park}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{Murgia Materana.png}
+    \caption{Maps from Google maps}
+    \label{fig:immagine1}
+  \end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{DSC03195.jpg}
+    \caption{view of Murgia, 14/02/2024, ph: Asia Cotrufo}
+    \label{fig:immagine2}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{National Park of Alta Murgia}
 \begin{itemize}
     \item\small \textbf{PnAM} is a national park established in 2004 located in Puglia, in the provinces of Bari and Barletta-Andria-Trani, with an extension of 68,033 hectares, extending into the highest part of the Murge plateau in the north-west.
-    \item\small it is part of the larger protection area established to protect the habitat of the \textit{Lesser kestrel} (Falco grillaio).
+    \item\small it is part of the larger protection area established to protect the habitat of the Falco grillaio.
     \item \small artificial reforestations of Aleppo pine were carried out over a period of approximately fifty years starting from 1930, affecting the internal areas and coastal strips of Puglia,
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Maps of the Parks}
+    \includegraphics[width = 0.8 \textwidth]{Murgia.png}
+    \footnotesize Maps of National Park of Alta Murgia, source: https://www.parcoaltamurgia.it/ 
+\end{frame}
+
 \begin{frame}{Habitat and Biodiversity}
 \begin{itemize}
-    \item\small the human activity over centuries has led to the depletion of woodlands while simultaneously promoting the spread of herbaceous species, resulting in degraded types of vegetation such as \textbf{garrigue} and \textbf{pseudo-steppe}.
+    \item\small the human activity over centuries has led to the depletion of woodlands while simultaneously promoting the spread of herbaceous species, resulting in degraded types of vegetation such as \textbf{garrigue} and \textbf{pseudo-steppe}, characterized by various species of orchids, including the recently discovered species \textbf{Ophrys murgiana}.
     \item  the climate is typically Mediterranean, with rainfall concentrated mainly in autumn and spring and practically absent during the summer (average annual temperatures vary from 9°C to 23°C)
     \item \small notable species include the \textbf{Thorny Thyme}  (\textit{Tymus spinulosus}), a rare endemic plant of Southern Italy, and the \textbf{Mediterranean asphodel} (\textit{Asphodelus microcarpus}).
+    \item\small the arboreal-shrub vegetation is made up of \textbf{wild olive, almond, blackthorn and pear}, among others.
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Flora}
+  
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{DSC03191.jpg}
+    \captionof{figure}{Asfodelo microcarpus,  ph: Asia Cotrufo}
+    \label{fig:immagine3}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{DSC03201.jpg}
+    \captionof{figure}{Barlia robertiana (Orchys), ph: Asia Cotrufo}
+    \label{fig:immagine4}
+  \end{minipage}
 \end{frame}
 
 \begin{frame}{Habitat and Biodiversity}
 \begin{itemize}
-    \item\small the \textbf{downy oak} and \textbf{fragno} that are home to a rich and picturesque fauna, such as the \textbf{wren} and the \textbf{river nightingale}.
-    \item\small Here it is also possible to meet reptiles such as the \textbf{Leopard Snake} and the \textbf{Common Viper}. Among the limestone rocks, terrestrial life includes martens, foxes, porcupine, badgers and hedgehogs.
-    \item\small the ornithological fauna includes the \textbf{Egyptian Vulture}, the \textbf{Lesser Kestrel }and other species such as \textbf{Buzzards}, \textbf{Red Kites} and \textbf{Woolly Falcons}.
-    \item \small forests are mainly made up of \textbf{oak species, Cypress and pines}. 
+    \item\small forests are mainly made up of \textbf{oak species, Cypress and pines}, that are home to a rich and picturesque fauna, such as the \textbf{wren} and the \textbf{river nightingale}.
+    \item\small Here it is also possible to meet reptiles such as the \textbf{Leopard Snake} and the \textbf{Common Viper}.
+    \item\small mammals include foxes, porcupines, badgers and hedgehogs.
+    \item\small the ornithological fauna includes the \textbf{Capovaccaio} (Neophron percnopterus), which is the smallest european vulture, and other species such as poiane (Buteo buteo) ed il Nibbio reale (Milvus milvus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Habitat and Biodiversity}
-\begin{itemize}
-    \item \small the steppe areas are characterized by herbaceous vegetation such as the \textbf{stipa} and various species of orchids, including the recently discovered species \textbf{Ophrys murgiana}.
-    \item \small the arboreal-shrub vegetation characterizing the natural pastures is made up of \textbf{wild olive, almond, blackthorn and pear}, among others.
-    \item The Murgia is also the habitat of amphibians such as the \textbf{Italian newt} (Triturus italicus), the \textbf{red deer} (Elaphe quatuorlineata) and \textbf{Hermann's tortoise} (Testudo hermanni).
-\end{itemize}    
+\begin{frame}
+  \frametitle{ornithological fauna}
+  
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{schede_18148_617_grillaio.jpg}
+    \captionof{figure}{Falco grillaio \textit{(Falco naumanni)}}
+    \label{fig:immagine5}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{YYFEDERPnov66072-img1.jpg}
+    \captionof{figure}{Capovaccaio \textit{(Neophron percnopterus)}, source: Google Images}
+    \label{fig:immagine6}
+  \end{minipage}
 \end{frame}
 
 \begin{frame}{Matera}
 \begin{itemize}
     \item\small is the third most ancient city of the world, also known as "\textbf{the city of the Sassi}", because of the peculiarity and uniqueness of its historic center, declared a world heritage site by UNESCO in 1993, which is made up of rock buildings and architecture dug into the rock.
-    \item\small the choice of the site guaranteed safety for the town but caused difficulties in supplying water. That is why, since Neolithic times, the inhabitants exploited the friability of the rock and the slopes to their advantage to create a complex system of water canalization, conducted in a widespread network of cisterns and "divers". This appears to be one of the oldest and best preserved examples of \textbf{bio-architecture} in the world.
-    \item\small In the late 1950s for irrigation purposes, the Bradano river was interrupted by the building of a dam, called \textbf{Lake San Giuliano}, which is part of a regional nature reserve. 
+    \item\small the choice of the site for the town caused difficulties in supplying water, but since ancient times a complex system of water canalization, cisterns and "divers" was created, appearing to be one of the oldest and best preserved examples of \textbf{bio-architecture} in the world.
+    \item\small In the late 1950s for irrigation purposes, the Bradano river was interrupted by the building of a dam, called \textbf{Lake San Giuliano}. 
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Matera}
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{DSC_0017.jpg}
+    \captionof{figure}{Chiesa Rupestre di Cristo La Selva, ph:Asia Cotrufo}
+    \label{fig:immagine7}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{materagravina.jpg}
+    \captionof{figure}{view of Matera and it Gravina}
+    \label{fig:immagine8}
+  \end{minipage}
 \end{frame}
 
 \begin{frame}{Maps of the Parks}
     \centering
     \includegraphics[width = 0.6 \textwidth]{mappa.png}
-\end{frame}
-
-\begin{frame}{Maps of the Parks}
-    \includegraphics[width = 0.5 \textwidth]{Murgia Materana.png}
-    \includegraphics[width = 0.48 \textwidth]{Murgia.png}
 \end{frame}
 
 
@@ -172,21 +234,9 @@ The images chosen cover the months of April, May or June, so between the spring 
     \includegraphics[width = 0.8 \textwidth]{FCover_differences.png}
 \end{frame}
 
-\begin{frame}{Difference of FCOVER}
-    \centering
-    \includegraphics[width = 0.50 \textwidth]{diffCOV_20_21.png}\\
-    \includegraphics[width = 0.50 \textwidth]{diffCOV_23_20.png}
-\end{frame}
-
 \begin{frame}{Difference of NDVI}
     \centering
     \includegraphics[width = 0.8 \textwidth]{NDVI_differences.png}
-\end{frame}
-
-\begin{frame}{Difference of NDVI}
-    \centering
-    \includegraphics[width = 0.50 \textwidth]{diffNDVI_20_21.png}\\
-    \includegraphics[width = 0.50 \textwidth]{diffNDVI_23_20.png}
 \end{frame}
 
 \begin{frame}{trend of NDVI through the years}
@@ -218,23 +268,57 @@ The images chosen cover the months of April, May or June, so between the spring 
     \includegraphics[width = 0.3\textwidth]{Rplot02.jpeg}
 \end{frame}
 
-\begin{frame}{trend of FCOVER-NDVI differences}
-    \centering
-    \includegraphics[width = \textwidth]{trend_differenza_fcover_ndvi.png}
-\end{frame}
-
 \section{Discussion}
 
 \begin{frame}{Discussion}
 \begin{itemize}
-    \item NDVI analysis suggests that the \textbf{vegetation is in a better condition than before}.
-    \item Moreover, FCOVER analysis support the evidence since it appears to be increased from 2020 to 2023.
+    \item\small The relationship between FCOVER and NDVI depends on several factors (vegetation type, canopy structure, environmental conditions...), but it's generally a positive correlation. This is because healthier and denser vegetation (higher NDVI values) often results in a greater Fcover.
+    \item\small Both NDVI and FCOVER analysis suggests that, in the area considered, the \textbf{vegetation is in a better condition than before}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Discussion}
+\begin{itemize}
+    \item\small For a better understanding we might consider the weather conditions in the period 2019-2023 (one year prior to our analysis).
+    \item\small Datas were taken from Agenzia Lucana di Sviluppo e di Innovazione in Agricoltura:
+    \item\url{https://www.alsia.it/opencms/opencms/Temi/attivita/Report-climatici-annuali/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Discussion}
+Generally in these areas rainfalls are concentrated in autumn and spring, while summer is pretty dry. 
+    \begin{itemize}
+        \item\small \textbf{2019}: was characterized buy various hails and storms events, especially in the \textbf{spring/summer} period, this may have affected the vegetation in the following months; \textbf{autumn} was pretty hot and dry.
+        \vspace{2mm}
+        \item\small \textbf{2020}: characterized by an \textbf{extremely dry winter}; some precipitation during the \textbf{spring/summer period,} but also a hot and very dry \textbf{autumn} until mid-November.
+        \vspace{2mm}
+        \item\small \textbf{2021}: numerous heat waves during \textbf{summer}, warm and partly dry \textbf{winter}; as well as a dry \textbf{spring};
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Discussion}
+    \begin{itemize}
+         \item\small \textbf{2022}: similar pattern of 2021
+         \vspace{2mm}
+        \item\small \textbf{2023}:\textbf{ mild, shorter and mostly dry winter} (in January 8.5° of mean T was recorded, compared to 4.4° of 2019); cool, unstable and \textbf{very rainy spring}; \textbf{very hot and dry summer} with numerous heat waves; \textbf{hot and very dry autumn}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+    \item \small It seems that in the Murgia areas considered, the Fraction of Vegetation Cover and the NDVI index has increased from 2020 to 2023, suggesting an \textbf{improvement} of the extent of green vegetations as well as its density and health.
+    \item \small It would be interesting to understand the \textbf{species composition changes} that is occurring in the area, since climate change is expected to have significant impacts on it and also on ecosystem structure and distribution. The vegetation types in these areas range from forests to woodlands, savannas, shrublands, and grasslands.
+    \item \small With increasing temperatures and decreased precipitation, generally an expansion of \textbf{scrublands and shrublands} will be favoured, at the expense of \textbf{forests} (important habitats for Falco naumanni) or \textbf{grasslands}.
+    \item \small However, the Mediterranean scrub has greater phenotypic plasticity, which allows it to adapt to current conditions with fewer problems. Added to this is the ability of the bushes to colonize the soil in extreme conditions, such as after a fire or during a dry period.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Conclusion}
-\centering
-In conclusion,.
+\begin{itemize}
+    \item\small However, climate change is having significant \textbf{impacts on agricultural systems} and cultivated landscapes in the region.
+    \item\small There are documented widespread critical issues related to \textbf{root asphyxiation} and \textbf{fruit splitting }(cracking). In the case of cereals there were evident \textbf{quality problems}, as well as \textbf{phytosanitary} ones, while for vegetable transplants there were delays due to frequent rains.
+    \item\small Due to the prolonged drought, even the non-irrigated olive tree was put to the test. In fact, the small amount of cold accumulated so far is creating some concern about a probable \textbf{early awakening or failure to satisfy the physiological needs}, at least for the most demanding species.
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -242,12 +326,14 @@ In conclusion,.
 \section{References}
 
 \begin{frame}{References}
-\begin{enumerate}
+\begin{itemize}
+
+\item\url{https://land.copernicus.vgt.vito.be/PDF/portal/Application.html}
 \item\url{https://www.parcoaltamurgia.it/}
 \item\url{https://www.parcomurgia.it/}
-\end{enumerate}
+\item\url{https://www.alsia.it/opencms/opencms/index.html}
+\end{itemize}
 \end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{GitHub}
