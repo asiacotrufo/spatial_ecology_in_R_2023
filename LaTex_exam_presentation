@@ -37,8 +37,7 @@
 \begin{itemize}
     \item\small a protected natural area located at the eastern end of Basilicata, within which there is the Gravina di Matera, a deep limestone canyon, at the bottom of which flows the stream Gravina.
     \item\small this area, inhabited since prehistoric times, is characterized by the presence of around \textbf{150 rock churches}.
-    \item \small the park holds approximately 923 vegetational species among which around a hundred are rare and very rare species.
-    \item \small the park's unique erosional grooves serve as conservative environments for ancient flora that have disappeared elsewhere.
+    \item \small the park holds approximately 923 vegetational species among which around a hundred are rare and very rare species. This is due to the park's unique erosional grooves which acted as a conservative environment for flora that have disappeared elsewhere.
     \item\small The symbol of the park is the \textbf{Falco grillaio} (\textit{Falco naumanni}), called "u strjscìgnl" in dialect, which often nests on the roofs of the Sassi di Matera.
 \end{itemize}
 \end{frame}
@@ -104,10 +103,8 @@
 
 \begin{frame}{Habitat and Biodiversity}
 \begin{itemize}
-    \item\small forests are mainly made up of \textbf{oak species, Cypress and pines}, that are home to a rich and picturesque fauna, such as the \textbf{wren} and the \textbf{river nightingale}.
-    \item\small Here it is also possible to meet reptiles such as the \textbf{Leopard Snake} and the \textbf{Common Viper}.
-    \item\small mammals include foxes, porcupines, badgers and hedgehogs.
-    \item\small the ornithological fauna includes the \textbf{Capovaccaio} (Neophron percnopterus), which is the smallest european vulture, and other species such as poiane (Buteo buteo) ed il Nibbio reale (Milvus milvus).
+    \item\small forests are mainly made up of \textbf{oak species, Cypress and pines}, that are home to a rich and picturesque fauna, such as the \textbf{wren} and the \textbf{river nightingale}. Another important species apart from Falco Grillaio is the \textbf{Capovaccaio} (Neophron percnopterus), which is the smallest european vulture, now at risk of extinction.
+    \item\small Reptiles includes the \textbf{Leopard Snake} and the \textbf{Common Viper}, while mammals include foxes, porcupines, badgers and hedgehogs, among others.
 \end{itemize}
 \end{frame}
 
@@ -130,8 +127,8 @@
 
 \begin{frame}{Matera}
 \begin{itemize}
-    \item\small is the third most ancient city of the world, also known as "\textbf{the city of the Sassi}", because of the peculiarity and uniqueness of its historic center, declared a world heritage site by UNESCO in 1993, which is made up of rock buildings and architecture dug into the rock.
-    \item\small the choice of the site for the town caused difficulties in supplying water, but since ancient times a complex system of water canalization, cisterns and "divers" was created, appearing to be one of the oldest and best preserved examples of \textbf{bio-architecture} in the world.
+    \item\small is the third most ancient city of the world, also known as "\textbf{the city of the Sassi}", because of the peculiarity of its historic center (world heritage site by UNESCO, 1993).
+    \item\small the choice of the site for the town caused difficulties in supplying water, but since ancient times a complex system of water canalization and collection was created, appearing to be one of the oldest and best preserved examples of \textbf{bio-architecture} in the world.
     \item\small In the late 1950s for irrigation purposes, the Bradano river was interrupted by the building of a dam, called \textbf{Lake San Giuliano}. 
 \end{itemize}
 \end{frame}
@@ -225,6 +222,12 @@ The images chosen cover the months of April, May or June, so between the spring 
     \footnotesize \textbf{FCover} calculated for each year (viridis color palette).
 \end{frame}
 
+\begin{frame}{code}
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{codice1.png}\\
+    \footnotesize \textbf{code} I used for e.g. FCOVER of 2021.
+\end{frame}
+
 \begin{frame}{NDVI}
     \centering
     \includegraphics[width = 0.8 \textwidth]{NDVIcomparison.png}\\
@@ -241,6 +244,16 @@ The images chosen cover the months of April, May or June, so between the spring 
     \includegraphics[width = 0.8 \textwidth]{NDVI_differences.png}
 \end{frame}
 
+\begin{frame}{code}
+    \centering
+    \includegraphics[width = 0.8 \textwidth]{codice2.png}
+    \captionsetup{font=tiny}
+    \captionof{figure}{code for stacking the data}
+    \includegraphics[width = 0.8\textwidth]{codice3.png}
+    \captionsetup{font=tiny}
+    \captionof{figure}{code for creating the difference-palette}
+\end{frame}
+
 \begin{frame}{trend of NDVI through the years}
     \centering
     \includegraphics[width = \textwidth]{NDVItrend.png}
@@ -254,6 +267,11 @@ The images chosen cover the months of April, May or June, so between the spring 
 \begin{frame}{correlation FCOVER-NDVI}
     \centering
     \includegraphics[width = \textwidth]{trend_ndvi_fcover.png}
+\end{frame}
+
+\begin{frame}{code}
+    \centering
+    \includegraphics[width = \textwidth]{codice4.png}
 \end{frame}
 
 \begin{frame}{trend of FCOVER differences}
