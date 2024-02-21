@@ -225,7 +225,11 @@ The images chosen cover the months of April, May or June, so between the spring 
 \begin{frame}{code}
     \centering
     \includegraphics[width = 0.8 \textwidth]{codice1.png}\\
-    \footnotesize \textbf{code} I used for e.g. FCOVER of 2021.
+    \captionsetup{font=tiny}
+    \captionof{figure}{code for plotting}
+    \includegraphics[width = 0.8\textwidth]{codice5.png}
+    \captionsetup{font=tiny}
+    \captionof{figure}{saving all the plot in 1}
 \end{frame}
 
 \begin{frame}{NDVI}
@@ -249,9 +253,9 @@ The images chosen cover the months of April, May or June, so between the spring 
     \includegraphics[width = 0.8 \textwidth]{codice2.png}
     \captionsetup{font=tiny}
     \captionof{figure}{code for stacking the data}
-    \includegraphics[width = 0.8\textwidth]{codice3.png}
+    \includegraphics[width = 0.8\textwidth]{codice6.png}
     \captionsetup{font=tiny}
-    \captionof{figure}{code for creating the difference-palette}
+    \captionof{figure}{creating the difference-palette and pairwise comparison}
 \end{frame}
 
 \begin{frame}{trend of NDVI through the years}
